@@ -1,87 +1,70 @@
-## This repo is no longer being maintained. Please visit: https://github.com/aws-samples/create-react-app-auth-amplify
-# CRA with AWS Amplify Auth 
+# Getting Started with Create React App
 
-This auth starter implements a basic authentication flow for signing up signing in users as well as protected client side routing using AWS Amplify. Auth features: User sign up, User sign in, Multi-factor Authentication, User sign-out.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[View Demo](https://master.d2ka7y7551sk8n.amplifyapp.com/)
+## Available Scripts
 
-![Amplify Auth](src/images/auth.gif)
+In the project directory, you can run:
 
-## Getting started
+### `npm start`
 
-1. Fork repo and then clone locally 
-```
-git clone git@github.com:<username>/create-react-app-auth-amplify.git
-```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-2. Change into the new directory
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-```sh
-cd create-react-app-auth-amplify
-```
+### `npm test`
 
-3. Install dependencies
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```sh
-yarn
-# or
-npm install
-```
+### `npm run build`
 
-4. Install & configure the AWS Amplify CLI. Note: we're going to be using the multi environment CLI version as it is the newest version.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-```sh
-npm install -g @aws-amplify/cli@multienv
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-amplify configure
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-> To see a video of how to configure the CLI, click [here](https://www.youtube.com/watch?v=fWbM5DLh25U)
+### `npm run eject`
 
-5. Create a new AWS Amplify Project
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-```
-amplify init
-```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-> Here, walk through the following steps. At the end of the `init` command a project will be initialized in the cloud for you.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-- Enter a name for the environment __master__
-- Choose your default editor: __Sublime Text__ (or your editor of choice)
-- Do you want to use an AWS profile? __y__ (choose default)
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-6. Run `amplify status`. The status should reflect as below. This indicates that an `Auth` resource is configured and ready to be created.
+## Learn More
 
-```
-| Category | Resource name   | Operation | Provider plugin   |
-| -------- | --------------- | --------- | ----------------- |
-| Auth     | cognito2140b2f3 | Create    | awscloudformation |
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-6. Push the updated project configuration to AWS. It will deploy a CloudFormation template that has an Amazon Cognito resource that enables user authentication.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-```sh
-amplify push
-```
+### Code Splitting
 
-7. Then you can run it by:
-```sh
-npm start
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-## Hosting with the AWS Amplify Console
+### Analyzing the Bundle Size
 
-The AWS Amplify Console provides continuous deployment and hosting for modern web apps (single page apps and static site generators). Continuous deployment allows developers to deploy updates to their frontend and backend on every code commit to their Git repository. If the build succeeds, the app is deployed and hosted on a global CDN with an *amplifyapp.com* domain. The Amplify Console offers globally available CDNs, easy custom domain setup, feature branch deployments, and password protection.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-1. Push your code to Git.
-1. Login to the [AWS Amplify Console](https://console.aws.amazon.com/amplify/home) and choose **Connect app**
-1. Connect repository and select `master` branch.
-1. Accept the default build settings.
-1. Give the Amplify Console permission to deploy backend resources with your frontend. This will allow the Console to detect changes to your backend on every code commit. If you do not have a service role, follow the prompts to create one.
-1. Review your changes and then choose **Save and deploy**. You app will now be available in a few minutes at `https://master.unique-id.amplifyapp.com`.
+### Making a Progressive Web App
 
-The Amplify Console will first check for changes to your backend, and then build and deploy your frontend to a managed hosting environment. You can now continuously deploy changes to your frontend or backend and Amplify will automatically deploy those changes. Learn how to customize the sign-in UI [here](https://aws-amplify.github.io/docs/js/authentication#customize-ui).
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-<!-- <img src="https://github.com/swaminator/gatsby-auth-starter-aws-amplify/blob/master/src/images/amplify-console.gif" width="800"/> -->
-![Amplify Console](src/images/amplifyconsole-cra.gif)
+### Advanced Configuration
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
