@@ -1,14 +1,4 @@
 export const navitems = [
-  {
-    title: "Home",
-    url: "/",
-  },
-  {
-    title: "About",
-    url: "/about",
-  },
-  {
-    title: "Services",
-    url: "/services",
-  },
+  { title: "Home", url: "#" },
+  { title: "Skills", url: "#skills" },
 ];

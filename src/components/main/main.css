@@ -1,39 +1,99 @@
+/* General Styles */
 .main {
   font-family: sans-serif;
-  line-height: 1;
+  line-height: 1.5;
   font-weight: 400;
+  text-align: center; /* Center-align text by default */
 }
 
+/* Typewriter Effect */
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid #e67e22;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+  text-align: center; /* Ensure text is centered */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #e67e22;
+  }
+}
+
+/* Hero Section */
 .section-hero {
   background-color: #fdf2e9;
-  padding: 9.6rem 0;
+  padding: 6rem 2rem; /* Adjusted for better spacing on small screens */
 }
 
 .hero {
   max-width: 130rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 9.6rem;
+  grid-template-columns: 1fr;
+  gap: 4rem;
   align-items: center;
+  text-align: center; /* Center-align text */
 }
 
-.btn:link,
-.btn:visited {
+.hero-img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 50px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Smooth and noticeable animations */
+}
+
+.hero-img:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adds depth effect */
+}
+
+.heading-primary {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #e67e22;
+  letter-spacing: -0.5px;
+  margin-bottom: 2.4rem;
+  text-align: center; /* Center-align heading text */
+}
+
+.hero-description {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  margin-bottom: 3.2rem;
+  text-align: center; /* Center-align description text */
+}
+
+/* Buttons */
+.btn {
   display: inline-block;
-  background-color: #e67e22;
-  color: #fff;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  padding: 1.6rem 3.2rem;
+  padding: 1.2rem 2.4rem;
   border-radius: 9.5px;
-
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added transitions for hover effects */
+  text-align: center; /* Center-align button text */
 }
 
-.btn--full:link,
-.btn--full:visited {
+.btn--full {
   background-color: #e67e22;
   color: #fff;
 }
@@ -41,10 +101,11 @@
 .btn--full:hover,
 .btn--full:active {
   background-color: #cf711f;
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth effect */
 }
 
-.btn--outline:link,
-.btn--outline:visited {
+.btn--outline {
   background-color: #fff;
   color: #555;
 }
@@ -53,29 +114,83 @@
 .btn--outline:active {
   background-color: #fdf2e9;
   box-shadow: inset 0 0 0 3px #fff;
+  transform: scale(1.05); /* Slight zoom effect */
 }
 
-.hero-img {
-  width: 80%;
-  margin-left: 12rem;
-  border-radius: 70px;
-}
-
+/* Margin Helper */
 .margin-right-sm {
   margin-right: 1.6rem !important;
 }
 
-.heading-primary {
-  font-size: 5.2rem;
-  font-weight: 700;
-  line-height: 1.05;
-  color: #333;
-  letter-spacing: -0.5px;
-  margin-bottom: 3.2rem;
+/* Responsive Design */
+@media (min-width: 601px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+
+  .hero-img {
+    width: 80%;
+    margin-left: 0; /* Remove left margin for consistency */
+  }
+
+  .heading-primary {
+    font-size: 4rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .hero-description {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    margin-bottom: 4.8rem;
+  }
+
+  .btn {
+    font-size: 1.8rem;
+    padding: 1.4rem 2.8rem;
+  }
 }
 
-.hero-description {
-  font-size: 2rem;
-  line-height: 2.5rem;
-  margin-bottom: 4.8rem;
+@media (min-width: 901px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 9.6rem;
+  }
+
+  .heading-primary {
+    font-size: 5.2rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .hero-description {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 4.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-hero {
+    padding: 6rem 1rem;
+  }
+
+  .hero-img {
+    border-radius: 50px;
+  }
+
+  .heading-primary {
+    font-size: 2.5rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .hero-description {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+  }
 }
