@@ -15,7 +15,10 @@ export default function Main() {
               optimizing database performance. Proficient in AWS services like
               EC2, S3, Lambda, and RDS.
             </p>
-            <a href="#" className="btn btn--full margin-right-sm">
+            <a
+              href="https://1drv.ms/w/c/ab989f9fd84bed1f/Ebg-B4P91sROphEpa2pcpHEBmOSdHHmsRD3mRivhqkQHQg?e=LCGDzv"
+              className="btn btn--full margin-right-sm"
+            >
               View Resume
             </a>
             <a href="#" className="btn btn--outline">
