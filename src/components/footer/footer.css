@@ -1,0 +1,163 @@
+/* Footer.css */
+.footer {
+  background: linear-gradient(
+    to right,
+    #38332e,
+    #222121
+  ); /* Gradient background */
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+  box-sizing: border-box; /* Ensure padding doesn't affect layout */
+}
+
+.footer-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.footer-description {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
+}
+
+.social-icon {
+  font-size: 2rem;
+  color: #fff;
+  display: inline-block;
+  transition: transform 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  transform: scale(1.2); /* Zoom effect on hover */
+  color: #f1c40f; /* Change color on hover */
+}
+
+.facebook:hover {
+  color: #3b5998; /* Facebook blue */
+}
+
+.twitter:hover {
+  color: #1da1f2; /* Twitter blue */
+}
+
+.linkedin:hover {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.instagram:hover {
+  color: #e4405f; /* Instagram pink */
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design for Footer */
+
+/* Large Devices (Desktops) */
+@media (min-width: 901px) {
+  .footer {
+    padding: 4rem 2rem;
+  }
+
+  .footer-title {
+    font-size: 2.4rem;
+  }
+
+  .footer-description {
+    font-size: 1.4rem;
+  }
+
+  .social-icons {
+    gap: 1.5rem;
+  }
+
+  .social-icon {
+    font-size: 2rem;
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .footer {
+    padding: 3rem 1.5rem;
+  }
+
+  .footer-title {
+    font-size: 2rem;
+  }
+
+  .footer-description {
+    font-size: 1.2rem;
+  }
+
+  .social-icons {
+    gap: 1rem;
+  }
+
+  .social-icon {
+    font-size: 1.8rem;
+  }
+}
+
+/* Small Devices (Mobile) */
+@media (max-width: 600px) {
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-title {
+    font-size: 1.8rem;
+  }
+
+  .footer-description {
+    font-size: 1.1rem;
+  }
+
+  .social-icons {
+    gap: 0.8rem;
+  }
+
+  .social-icon {
+    font-size: 1.6rem;
+  }
+}
+
+/* Extra Small Devices (Very Small Screens) */
+@media (max-width: 400px) {
+  .footer {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .footer-title {
+    font-size: 1.6rem;
+  }
+
+  .footer-description {
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    gap: 0.5rem;
+  }
+
+  .social-icon {
+    font-size: 1.4rem;
+  }
+}

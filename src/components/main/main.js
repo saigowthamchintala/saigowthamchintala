@@ -34,7 +34,7 @@ export default function Main() {
             >
               View Resume
             </a>
-            <a href="/#" className="btn btn--outline">
+            <a href="#footer" className="btn btn--outline">
               Connect With Me
             </a>
           </div>
