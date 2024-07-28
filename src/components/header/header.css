@@ -1,11 +1,63 @@
+/* Ensure body and html have full width and height */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Full-width header */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fdf2e9;
-  height: 9.6 rem;
-  padding: 0 4.8rem;
+  height: 9.6rem;
+  padding: 0 4.8rem; /* Padding inside the header */
+  width: 100%; /* Ensure header spans full width */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
+
+/* Ensure header background color spans full viewport width */
+.header-wrapper {
+  width: 100vw; /* Full viewport width */
+  position: relative; /* Relative positioning for full width */
+  left: 50%; /* Center align within the viewport */
+  margin-left: -50vw; /* Offset by half of viewport width */
+}
+
+/* Logo size */
 .logo {
   height: 3.2rem;
+}
+
+/* Tablet Screens (min-width: 600px) */
+@media (max-width: 900px) {
+  .header {
+    padding: 0 2rem; /* Adjust padding for smaller screens */
+  }
+
+  .logo {
+    height: 2.5rem; /* Adjust logo size for tablets */
+  }
+}
+
+/* Mobile Screens (max-width: 600px) */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: flex-start; /* Align items to the start */
+    height: auto; /* Adjust height automatically */
+    padding: 1.5rem; /* Adjust padding for small screens */
+  }
+
+  .logo {
+    height: 2rem; /* Further reduce logo size for mobile */
+  }
+
+  .main-nav-list {
+    flex-direction: column; /* Stack navigation links vertically on mobile */
+    gap: 1rem; /* Space out navigation items */
+  }
 }

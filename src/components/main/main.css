@@ -40,6 +40,8 @@
 .section-hero {
   background-color: #fdf2e9;
   padding: 6rem 2rem; /* Adjusted for better spacing on small screens */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hero {
@@ -55,6 +57,8 @@
 .hero-img {
   width: 100%;
   max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure image covers the container */
   border-radius: 50px;
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Smooth and noticeable animations */
 }
@@ -78,7 +82,7 @@
   font-size: 1.6rem;
   line-height: 2.2rem;
   margin-bottom: 3.2rem;
-  text-align: center; /* Center-align description text */
+  text-align: justify; /* Center-align description text */
 }
 
 /* Buttons */
@@ -123,15 +127,19 @@
 }
 
 /* Responsive Design */
-@media (min-width: 601px) {
+
+/* Medium Devices (Tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
   .hero {
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
+    grid-template-columns: 1fr 1fr; /* Two columns layout */
+    gap: 4rem; /* Adjust gap to ensure space */
   }
 
   .hero-img {
-    width: 80%;
-    margin-left: 0; /* Remove left margin for consistency */
+    max-width: 100%;
+    width: 100%; /* Ensure image scales properly */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure image covers the container */
   }
 
   .heading-primary {
@@ -151,6 +159,7 @@
   }
 }
 
+/* Large Devices (Desktops) */
 @media (min-width: 901px) {
   .hero {
     grid-template-columns: 1fr 1fr;
@@ -169,6 +178,7 @@
   }
 }
 
+/* Small Devices (Mobile) */
 @media (max-width: 600px) {
   .section-hero {
     padding: 6rem 1rem;
@@ -192,5 +202,28 @@
   .btn {
     font-size: 1.4rem;
     padding: 1rem 2rem;
+  }
+}
+
+/* Extra Small Devices (Very Small Screens) */
+@media (max-width: 400px) {
+  .hero {
+    gap: 2rem; /* Reduce gap for very small screens */
+  }
+
+  .heading-primary {
+    font-size: 2rem; /* Further reduce font size */
+    margin-bottom: 1rem; /* Reduce bottom margin */
+  }
+
+  .hero-description {
+    font-size: 1.2rem; /* Further reduce font size */
+    line-height: 1.6rem; /* Adjust line height */
+    margin-bottom: 1.5rem; /* Reduce bottom margin */
+  }
+
+  .btn {
+    font-size: 1.2rem; /* Reduce button font size */
+    padding: 0.8rem 1.6rem; /* Adjust button padding */
   }
 }
