@@ -1,0 +1,224 @@
+/* src/components/experience.css */
+.work-experience {
+  padding: 2rem;
+  background: #fdf2e9; /* Light background color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work-experience h2 {
+  font-size: 3rem; /* Increased heading font size */
+  margin-bottom: 2rem;
+  color: #cf711f; /* Darker orange color for heading */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background: #e67e22; /* Main theme color for the timeline line */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  margin-bottom: 2.5rem; /* Increased margin for spacing */
+  position: relative;
+  width: 100%;
+  padding: 1.5rem; /* Increased padding for better readability */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: transparent; /* Ensure background is transparent */
+}
+
+.timeline-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 10px 10px 20px 10px rgba(241, 93, 8, 0.822);
+}
+
+.timeline-content {
+  background: #fff; /* White background for content */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem; /* Increased padding */
+  position: relative;
+  transition: box-shadow 0.3s ease;
+  z-index: 1; /* Ensure it stays above the line */
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out logo and text */
+}
+
+.company-info > div {
+  flex: 1; /* Make sure text container takes up available space */
+}
+
+.company-logo {
+  width: 150px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15%;
+  margin-left: 1rem; /* Margin on the left for spacing */
+  margin-right: 2rem;
+}
+
+.timeline-content h3 {
+  font-size: 1.8rem; /* Increased font size for position */
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.timeline-content h4 {
+  font-size: 1.6rem; /* Increased font size for company name */
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.timeline-content p {
+  font-size: 1.4rem; /* Increased font size for location and date */
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.timeline-content ul {
+  font-size: 1.4rem; /* Increased font size for responsibilities */
+  list-style-type: disc;
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.timeline-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content::before {
+  content: "";
+  position: absolute;
+  top: 25px; /* Adjusted for larger dot */
+  left: -15px; /* Adjusted for larger dot */
+  width: 25px;
+  height: 25px;
+  background: #fff; /* White dot background */
+  border: 4px solid #e67e22; /* Main theme color for the dot border */
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #fff;
+  transform: translateX(-50%);
+}
+
+.timeline-item:hover .timeline-content {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .timeline {
+    max-width: 900px;
+  }
+
+  .work-experience h2 {
+    font-size: 2.5rem; /* Adjusted for medium devices */
+  }
+
+  .timeline-content h3 {
+    font-size: 1.6rem; /* Adjusted for medium devices */
+  }
+
+  .timeline-content h4 {
+    font-size: 1.4rem; /* Adjusted for medium devices */
+  }
+
+  .timeline-content p {
+    font-size: 1.2rem; /* Adjusted for medium devices */
+  }
+
+  .timeline-content ul {
+    font-size: 1.2rem; /* Adjusted for medium devices */
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    padding: 1.5rem; /* Adjusted for tablets */
+  }
+
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-content::before {
+    left: -16px;
+  }
+
+  .work-experience h2 {
+    font-size: 2rem; /* Adjusted for tablets */
+  }
+
+  .timeline-content h3 {
+    font-size: 1.4rem; /* Adjusted for tablets */
+  }
+
+  .timeline-content h4 {
+    font-size: 1.2rem; /* Adjusted for tablets */
+  }
+
+  .timeline-content p {
+    font-size: 1rem; /* Adjusted for tablets */
+  }
+
+  .timeline-content ul {
+    font-size: 1rem; /* Adjusted for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .work-experience h2 {
+    font-size: 1.6rem; /* Adjusted for mobile devices */
+  }
+
+  .timeline {
+    padding: 0 0.5rem;
+  }
+
+  .timeline-content {
+    padding: 1.5rem; /* Adjusted for mobile devices */
+  }
+
+  .company-logo {
+    width: 60px; /* Slightly larger logo size for mobile devices */
+  }
+
+  .timeline-content h3 {
+    font-size: 1.2rem; /* Adjusted for mobile devices */
+  }
+
+  .timeline-content h4 {
+    font-size: 1rem; /* Adjusted for mobile devices */
+  }
+
+  .timeline-content p {
+    font-size: 0.9rem; /* Adjusted for mobile devices */
+  }
+
+  .timeline-content ul {
+    font-size: 0.9rem; /* Adjusted for mobile devices */
+  }
+
+  .timeline-content::before {
+    width: 20px;
+    height: 20px;
+    border-width: 3px;
+  }
+}
